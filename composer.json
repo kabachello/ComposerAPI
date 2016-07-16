@@ -1,0 +1,18 @@
+{
+	"name" : "kabachello/ComposerAPI",
+	"description" : "A wrapper for Composer to call it's commands programmatically using a simple intuitive API",
+	"type" : "library",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Andrej Kabachnik",
+			"email" : "kabachnik@gmail.com",
+			"role" : "Creator"
+		}
+	],
+	"support" : {
+		"issues" : "https://github.com/kabachello/ComposerAPI/issues"
+	},
+	"require" : {
+		"composer/composer" : "~1.0"
+	}
+}
