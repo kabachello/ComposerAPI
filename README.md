@@ -3,9 +3,9 @@ A wrapper for [Composer](http://getcomposer.org) to call it's commands from insi
 
 ## Installation
 As always, the easiest (and the recommended) way to install is using composer:
-<pre><code>
+```
 composer require kabachello/composerapi:*
-</code></pre>
+```
 
 There is no simple way to install composer an the API without using composer itself. Theoretically you could include ComposerAPI.php in your code manually, but you would need to make sure an installation of "composer/composer" is available under the namespace "\Composer". The trouble is, however, that composer has lot's of dependencies itself, so you will probably end up needing the packaged version (composer.phar) anyway. If so, use the simple composer-install above.
 
