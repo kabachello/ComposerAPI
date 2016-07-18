@@ -21,7 +21,7 @@ echo ($output);
 
 ## Supported commands
 - *install*: <code>$composer->install()</code>. This will probably not be used very often because the API mostly makes sense for managing existing installations and not for installing "from scratch".
-- *update*: Install: <code>$composer->update()</code> or <code>$composer->update(array('monolog/monolog', 'kabachello/composerapi'))</code>
+- *update*: <code>$composer->update()</code> or <code>$composer->update(array('monolog/monolog', 'kabachello/composerapi'))</code>
 - *require*: <code>$composer->require(array('monolog/monolog:~1.16', 'slim/slim'))</code>
 - *remove*: <code>$composer->remove(array('monolog/monolog'))</code>
 - *search*: <code>$composer->search(array('composerapi'))</code>
