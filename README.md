@@ -1,5 +1,5 @@
 # ComposerAPI
-A wrapper for [Composer](http://getcomposer.org) to call it's commands programmatically using a simple object oriented API: turns <code>php composer.phar require monolog/monolog</code> into <code>$composer->require(array('monolog/monolog:*'));</code>.
+A wrapper for [Composer](http://getcomposer.org) to call it's commands from inside your code using a simple object oriented API: turns <code>php composer.phar require monolog/monolog</code> into <code>$composer->require(array('monolog/monolog:*'));</code>.
 
 ## Installation
 As always, the easiest (and the recommended) way to install is using composer:
