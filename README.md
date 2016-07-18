@@ -11,11 +11,13 @@ There is no simple way to install composer an the API without using composer its
 
 ## Quick start
 Here is an example, that adds the monolog library to an existing composer.json manifest and installes it with all dependencies:
-<pre><code>
+```php
+<?php
 $composer = new \kabachello\ComposerAPI\ComposerAPI("path_to_the_folder_with_your_composer_json");
 $output = $composer->require(array('monolog/monolog:*);
 echo ($output);
-</code></pre>
+?>
+```
 
 ## Supported commands
 - *install*: <code>$composer->install()</code>. This will probably not be used very often because the API mostly makes sense for managing existing installations and not for installing "from scratch".
