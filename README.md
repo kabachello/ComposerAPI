@@ -14,7 +14,7 @@ Here is an example, that adds the monolog library to an existing composer.json m
 ```php
 <?php
 $composer = new \kabachello\ComposerAPI\ComposerAPI("path_to_the_folder_with_your_composer_json");
-$output = $composer->require(array('monolog/monolog:*);
+$output = $composer->require(array('monolog/monolog:*');
 echo ($output);
 ?>
 ```
