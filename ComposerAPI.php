@@ -3,6 +3,7 @@
 use Composer\Console\Application;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Output\StreamOutput;
 
 class ComposerAPI {
 	private $path_to_composer_home = '';
@@ -99,7 +100,7 @@ class ComposerAPI {
 		return $application;
 	}
 	
-	protected function get_default_output_formatter(){
+	protected function get_default_output_container(){
 		// Setup composer output formatter
 		$stream = fopen('php://temp', 'w+');
 		$output = new StreamOutput($stream);
@@ -108,7 +109,7 @@ class ComposerAPI {
 	
 	protected function call_command($command, array $arguments = null, OutputInterface $output = null){
 		if (is_null($output)){
-			$output = $this->get_default_output_formatter();
+			$output = $this->get_default_output_container();
 		}
 		
 		// Switch directory to the composer home folder
