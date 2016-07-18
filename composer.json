@@ -1,6 +1,6 @@
 {
 	"name" : "kabachello/composerapi",
-	"description" : "A wrapper for Composer to call it's commands programmatically using a simple intuitive API",
+	"description" : "A wrapper for Composer to call its commands programmatically using a simple object oriented API",
 	"type" : "library",
 	"license" : "MIT",
 	"authors" : [{
@@ -13,6 +13,6 @@
 		"issues" : "https://github.com/kabachello/ComposerAPI/issues"
 	},
 	"require" : {
-		"composer/composer" : "~1.0"
+		"composer/composer" : "^1.0"
 	}
 }
