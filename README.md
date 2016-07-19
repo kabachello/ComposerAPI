@@ -31,3 +31,4 @@ echo ($output);
 - *depends*: <code>$composer->depends('doctrine/lexer', array('--tree'))</code>
 - *prohibits*: <code>$composer->prohibits('symfony/symfony', '3.1', array('--tree'))</code>
 - *validate*: <code>$composer->validate()</code>
+- *config*: <code>$composer->config('repositories.foo', array('vcs', 'https://github.com/foo/bar'))</code>
