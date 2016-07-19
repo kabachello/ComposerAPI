@@ -205,6 +205,8 @@ class ComposerAPI {
 		
 		if (is_array($package_names) && count($package_names) > 0){
 			$arguments['packages'] = $package_names;
+		} else {
+			throw new \InvalidArgumentException('The require command requires at least one package name - none given!');
 		}
 				
 		if ($options = $this->prepare_array_input_args($options)){
@@ -371,6 +373,36 @@ class ComposerAPI {
 	 */
 	public function validate(array $options = null, OutputInterface $output = null) {
 		return $this->call_command('validate', $this->prepare_array_input_args($options), $output);
+	}
+	
+	/**
+	 * Edits config settings and repositories in either the composer.json file: see https://getcomposer.org/doc/03-cli.md#config
+	 * 
+	 * @param string $setting_key
+	 * @param array $setting_values
+	 * @param array $options
+	 * @param OutputInterface $output
+	 * @throws \InvalidArgumentException
+	 * @return \Symfony\Component\Console\Output\OutputInterface
+	 */
+	public function config($setting_key, array $setting_values, array $options = null, OutputInterface $output = null){
+		$arguments = array();
+		
+		if ($options = $this->prepare_array_input_args($options)){
+			$arguments += $options;
+		}
+		
+		if ($setting_key != ''){
+			$arguments['setting-key'] = $setting_key;
+		} else {
+			throw new \InvalidArgumentException('Invalid setting key "' . $setting_key . '"!');
+		}
+		
+		if (is_array($setting_values) && count($setting_values) > 0){
+			$arguments['setting-value'] = $setting_values;
+		} 
+		
+		return $this->call_command('config', $arguments, $output);
 	}
 
 }
