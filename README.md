@@ -15,9 +15,16 @@ There is no simple way to install composer an the API without using composer its
 Here is an example, that adds the monolog library to an existing composer.json manifest and installes it with all dependencies:
 ```php
 <?php
+// Instantiate ComposerAPI
 $composer = new \kabachello\ComposerAPI\ComposerAPI("path_to_the_folder_with_your_composer_json");
+// Run the require command for monolog/monolog (latest version). The default output will be symfony's StreamOutput
 $output = $composer->require(array('monolog/monolog:*');
-echo ($output);
+// Fetch the stream
+$stream  = $output->getStream();
+// Rewind it to get the full contents
+rewind($stream);
+// Print everything composer had written to the console
+echo(stream_get_contents($stream));
 ?>
 ```
 
