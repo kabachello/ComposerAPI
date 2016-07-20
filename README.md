@@ -31,18 +31,18 @@ echo(stream_get_contents($stream));
 ## Supported commands
 All commands take an optional $output argument that must implement the <code>OutputInterface</code> of symfony console. If this argument is not passed, ComposerAPI will use <code>StreamOutput</code> by default.
 
-- *install(array $options = null, OutputInterface $output = null)*: <code>$composer->install()</code>. This will probably not be used very often because the API mostly makes sense for managing existing installations and not for installing "from scratch".
-- *update(array $package_names = null, array $options = null, OutputInterface $output = null)*: <code>$composer->update()</code> or <code>$composer->update(array('monolog/monolog', 'kabachello/composerapi'))</code>
-- *require*: <code>$composer->require(array('monolog/monolog:~1.16', 'slim/slim'))</code>
-- *remove*: <code>$composer->remove(array('monolog/monolog'))</code>
-- *search*: <code>$composer->search(array('composerapi'))</code>
-- *show*: <code>$composer->show()</code> or <code>$composer->show(array('--latest'))</code>
-- *outdated*: <code>$composer->outdated()</code>
-- *suggests*: <code>$composer->suggests()</code> or <code>$composer->suggests(array('symfony/event-dispatcher'), array('--tree'))</code>
-- *depends*: <code>$composer->depends('doctrine/lexer', array('--tree'))</code>
-- *prohibits*: <code>$composer->prohibits('symfony/symfony', '3.1', array('--tree'))</code>
-- *validate*: <code>$composer->validate()</code>
-- *config*: <code>$composer->config('repositories.foo', array('vcs', 'https://github.com/foo/bar'))</code>
+- *install(array $options = null, OutputInterface $output = null)*: e.g. <code>$composer->install()</code>. This will probably not be used very often because the API mostly makes sense for managing existing installations and not for installing "from scratch".
+- *update(array $package_names = null, array $options = null, OutputInterface $output = null)*: e.g. <code>$composer->update()</code> or <code>$composer->update(array('monolog/monolog', 'kabachello/composerapi'))</code>
+- *require(array $package_names, array $options = null, OutputInterface $output = null)*: e.g. <code>$composer->require(array('monolog/monolog:~1.16', 'slim/slim'))</code>
+- *remove(array $package_names, array $options = null, OutputInterface $output = null)*: e.g. <code>$composer->remove(array('monolog/monolog'))</code>
+- *search(array $search_terms, array $options = null, OutputInterface $output = null)*: e.g. <code>$composer->search(array('composerapi'))</code>
+- *show(array $options = null, OutputInterface $output = null)*: e.g. <code>$composer->show()</code> or <code>$composer->show(array('--latest'))</code>
+- *outdated(array $options = null, OutputInterface $output = null)*: e.g. <code>$composer->outdated()</code>
+- *suggests(array $package_names = null, array $options = null, OutputInterface $output = null)*: e.g. <code>$composer->suggests()</code> or <code>$composer->suggests(array('symfony/event-dispatcher'), array('--tree'))</code>
+- *depends($package_name, $version = null, array $options = null, OutputInterface $output = null)*: e.g. <code>$composer->depends('doctrine/lexer', array('--tree'))</code>
+- *prohibits($package_name, $version = null, array $options = null, OutputInterface $output = null)*: e.g. <code>$composer->prohibits('symfony/symfony', '3.1', array('--tree'))</code>
+- *validate(array $options = null, OutputInterface $output = null)*: e.g. <code>$composer->validate()</code>
+- *config($setting_key, array $setting_values, array $options = null, OutputInterface $output = null)*: e.g. <code>$composer->config('repositories.foo', array('vcs', 'https://github.com/foo/bar'))</code>
 
 ## Known limitations
 
