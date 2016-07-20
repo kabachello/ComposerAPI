@@ -29,8 +29,10 @@ echo(stream_get_contents($stream));
 ```
 
 ## Supported commands
-- *install*: <code>$composer->install()</code>. This will probably not be used very often because the API mostly makes sense for managing existing installations and not for installing "from scratch".
-- *update*: <code>$composer->update()</code> or <code>$composer->update(array('monolog/monolog', 'kabachello/composerapi'))</code>
+All commands take an optional $output argument that must implement the <code>OutputInterface</code> of symfony console. If this argument is not passed, ComposerAPI will use <code>StreamOutput</code> by default.
+
+- *install(array $options = null, OutputInterface $output = null)*: <code>$composer->install()</code>. This will probably not be used very often because the API mostly makes sense for managing existing installations and not for installing "from scratch".
+- *update(array $package_names = null, array $options = null, OutputInterface $output = null)*: <code>$composer->update()</code> or <code>$composer->update(array('monolog/monolog', 'kabachello/composerapi'))</code>
 - *require*: <code>$composer->require(array('monolog/monolog:~1.16', 'slim/slim'))</code>
 - *remove*: <code>$composer->remove(array('monolog/monolog'))</code>
 - *search*: <code>$composer->search(array('composerapi'))</code>
