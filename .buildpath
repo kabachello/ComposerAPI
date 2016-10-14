@@ -2,6 +2,6 @@
 <buildpath>
 	<buildpathentry kind="src" path=""/>
 	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
-	<buildpathentry external="true" kind="lib" path="C:/xampp/htdocs/exface/exface/vendor/composer/composer/src/Composer"/>
-	<buildpathentry external="true" kind="lib" path="C:/xampp/htdocs/exface/exface/vendor/symfony/console"/>
+	<buildpathentry external="true" kind="lib" path="C:/wamp/www/exface/exface/vendor/composer/composer/src/Composer"/>
+	<buildpathentry external="true" kind="lib" path="C:/wamp/www/exface/exface/vendor/symfony/console"/>
 </buildpath>
