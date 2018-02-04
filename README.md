@@ -18,7 +18,7 @@ Here is an example, that adds the monolog library to an existing composer.json m
 // Instantiate ComposerAPI
 $composer = new \kabachello\ComposerAPI\ComposerAPI("path_to_the_folder_with_your_composer_json");
 // Run the require command for monolog/monolog (latest version). The default output will be symfony's StreamOutput
-$output = $composer->require(array('monolog/monolog:*');
+$output = $composer->require(array('monolog/monolog:*'));
 // Fetch the stream
 $stream  = $output->getStream();
 // Rewind it to get the full contents
