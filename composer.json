@@ -1,5 +1,5 @@
 {
-	"name" : "kabachello/composerapi",
+	"name" : "strausmann/composerapi",
 	"description" : "A wrapper for Composer to call its commands programmatically using a simple object oriented API",
 	"type" : "library",
 	"license" : "MIT",
