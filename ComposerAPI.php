@@ -376,6 +376,30 @@ class ComposerAPI {
 	}
 	
 	/**
+	 * Clear the Composer cache file: see https://getcomposer.org/doc/03-cli.md#clear-cache-clearcache-
+	 *
+	 * @param array $options
+	 * @param OutputInterface $output
+	 * @return \Symfony\Component\Console\Output\OutputInterface
+	 */
+	public function clearcache(array $options = null, OutputInterface $output = null) {
+		return $this->call_command('clearcache', $this->prepare_array_input_args($options), $output);
+	}
+	
+	/**
+	 * The check-platform-reqs command checks that your PHP and extensions versions match the platform requirements of 
+	 * the installed packages. This can be used to verify that a production server has all the extensions needed to run
+	 * a project after installing it for example.: see https://getcomposer.org/doc/03-cli.md#check-platform-reqs
+	 *
+	 * @param array $options
+	 * @param OutputInterface $output
+	 * @return \Symfony\Component\Console\Output\OutputInterface
+	 */
+	public function check_platform_reqs(array $options = null, OutputInterface $output = null) {
+		return $this->call_command('check-platform-reqs', $this->prepare_array_input_args($options), $output);
+	}
+	
+	/**
 	 * Edits config settings and repositories in either the composer.json file: see https://getcomposer.org/doc/03-cli.md#config
 	 * 
 	 * @param string $setting_key
